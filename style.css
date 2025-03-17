@@ -1,0 +1,45 @@
+body {
+    font-family: 'Sawarabi Mincho', serif;
+    background-color: #f8f4e3;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+}
+
+h1 {
+    color: #b71c1c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-tabs {
+    border-bottom: 4px solid #b71c1c;
+}
+
+.nav-tabs .nav-link {
+    background-color: #ffebcd;
+    color: #3e2723;
+    border: none;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #b71c1c;
+    color: white;
+    border-bottom: 4px solid #b71c1c;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    background-color: #fff3e0;
+}
+
+.modal-content {
+    background-color: #fff3e0;
+}
