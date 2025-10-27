@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE_NAME = 'NAMA_USERNAME_ANDA/makanan-jepang:latest'
+        DOCKER_IMAGE_NAME = 'alvynwira/makanan-jepang:latest'
         CONTAINER_NAME = 'makanan-jepang-container'
     }
 
