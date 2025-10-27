@@ -47,12 +47,11 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-                echo "Menghentikan container lama (jika ada)..."
-                bat "docker stop ${CONTAINER_NAME} & exit /b 0"
-                bat "docker rm ${CONTAINER_NAME} & exit /b 0"
+                echo "Memaksa Henti & Hapus container lama (jika ada)..."
+                bat "docker rm -f ${CONTAINER_NAME} & exit /b 0"
                 
-                echo "Menjalankan container baru di port 8082..."
-                bat "docker run -d --name ${CONTAINER_NAME} -p 8082:80 ${DOCKER_IMAGE_NAME}"
+                echo "Menjalankan container baru di port 8089..."
+                bat "docker run -d --name ${CONTAINER_NAME} -p 8089:80 ${DOCKER_IMAGE_NAME}"
             }
         }
     }
