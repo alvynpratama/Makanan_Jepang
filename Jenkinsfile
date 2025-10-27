@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE_NAME = 'alvynwira/makanan-jepang:latest'
+        DOCKER_IMAGE_NAME = 'NAMA_USERNAME_ANDA/makanan-jepang:latest'
         CONTAINER_NAME = 'makanan-jepang-container'
     }
 
@@ -18,7 +18,7 @@ pipeline {
         stage('Build & Test (PHP Syntax Check)') {
             steps {
                 echo 'Menjalankan PHP syntax check (lint)...'
-                bat 'docker run --rm -v "%WORKSPACE%":/app -w /app php:8.2-cli find . -name "*.php" -exec php -l {} \\;'
+                bat 'docker run --rm -v "%WORKSPACE%":/app -w /app php:8.2-cli find . -name "*.php" -exec php -l {} +'
             }
         }
         
