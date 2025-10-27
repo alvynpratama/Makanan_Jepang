@@ -31,7 +31,7 @@ pipeline {
 
         stage('Push to Docker Hub') {
             environment {
-                DOCKER_CREDS = credentials('dockerhub-credentials-jepang')
+                DOCKER_CREDS = credentials('credentials-dockerhub')
             }
             steps {
                 echo 'Logging in to Docker Hub...'
